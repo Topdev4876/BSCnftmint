@@ -1,0 +1,144 @@
+
+.glow-on-hover {
+    font-size: 1.2rem;
+    width: 250px;
+    height: 40px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: linear-gradient(#b66635, #ebab50);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: linear-gradient(#b66635, #ebab50);
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#ac6032, #ebab50);;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+.smallbtn{
+    font-size: 1.4rem !important;
+    width:50px !important;
+    height: 40px !important;
+}
+.count{
+    font-weight: bold;
+    color: #b15e3d;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.mintbutton{
+    margin-top: 20px;
+    width: 300px;
+    height: 45px;
+}
+.whitelister{
+    color: rgb(246, 9, 9);
+    margin-bottom: 10px;
+}
+.mintprice{
+    font-weight: bold;
+    color: #1616d8;
+    margin-top:10px;
+    font-size: 1rem;
+}
+.mint_available{
+    color: #1616d8;
+    font-size: 23px;
+    font-weight: bold;
+}
+.mintbtn{
+    display: flex;
+    justify-content: center;
+}
+@media (min-width: 1900px){
+    .smallbtn{
+        font-size: 2.4rem !important;
+        width:80px !important;
+        height: 60px !important;
+    }
+    .glow-on-hover{
+        font-size: 2.5rem;
+        width: 450px;
+        height: 77px;
+    }
+    .mintprice{
+        font-size: 2rem;
+    }
+    .mintbutton{
+        margin-top: 20px;
+        width: 500px;
+        height: 77px;
+    }
+}
+@media (max-width: 300px){
+    .smallbtn{
+        font-size: 1.3rem !important;
+        width:40px !important;
+        height: 40px !important;
+    }
+    .glow-on-hover{
+        font-size: 1.2rem;
+        width: 200px;
+        height: 40px;
+    }
+    .mintprice{
+        font-size: 1rem;
+    }
+    .mintbutton{
+        margin-top: 20px;
+        width: 240px;
+        height: 40px;
+    }
+}
+.carousel-container{
+    width:100%;
+}
+.good{
+    width: 100%;
+}
